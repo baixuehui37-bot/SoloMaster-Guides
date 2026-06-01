@@ -1,0 +1,84 @@
+#!/bin/bash
+# Batch create all remaining game + category pages
+
+G="/sessions/great-focused-fermi/mnt/AI网站/games"
+C="/sessions/great-focused-fermi/mnt/AI网站/categories"
+
+# Game pages
+for game_id in resident-evil-requiem slay-the-spire-2 road-to-vostok mouse-pi-for-hire clair-obscur-expedition-33 baldurs-gate-3 black-myth-wukong saros gta-6; do
+  cat > "$G/$game_id.html" << PAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAME_TITLE — Guides, Tips & Walkthroughs | SoloMaster Guides</title>
+<meta name="description" content="Complete guide hub for GAME_TITLE. Expert guides, walkthroughs, builds, secrets and tips.">
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#ff6b35"/><text x="16" y="23" text-anchor="middle" fill="white" font-size="16">S</text></svg>SoloMaster Guides</a>
+    <nav class="header-nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="../categories/action-rpg.html">Action RPG</a>
+      <a href="../categories/open-world.html">Open World</a>
+      <a href="../categories/horror.html">Horror</a>
+      <a href="../categories/roguelike.html">Roguelike</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+  </div>
+</header>
+<div class="container"><main></main></div>
+<footer class="site-footer"><div class="footer-bottom" style="max-width:1280px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);"><span>&copy; 2026 SoloMaster Guides</span><span>Updated Daily — June 1, 2026</span></div></footer>
+<script src="../js/site-config.js"></script>
+<script src="../js/game-page.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</body>
+</html>
+PAGE
+  echo "Created $game_id"
+done
+
+# Category pages
+for cat in horror soulslike fps rpg roguelike metroidvania survival puzzle-adventure; do
+  cat > "$C/$cat.html" << CATPAGE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAT_NAME Guides — SoloMaster Guides</title>
+<meta name="description" content="Expert guides for the best CAT_NAME games. Builds, walkthroughs, boss strategies and more.">
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="../index.html" class="logo"><svg width="32" height="32" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#ff6b35"/><text x="16" y="23" text-anchor="middle" fill="white" font-size="16">S</text></svg>SoloMaster Guides</a><nav class="header-nav"><a href="../index.html">Home</a><a href="action-rpg.html">Action RPG</a><a href="open-world.html">Open World</a></nav></div></header>
+<main class="container"><div class="category-header"><h1>CAT_ICON CAT_NAME</h1><p>CAT_DESC</p></div><div class="article-grid" id="categoryGrid"></div></main>
+<footer class="site-footer"><div class="footer-bottom" style="max-width:1280px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);"><span>&copy; 2026 SoloMaster Guides</span><span>Updated Daily</span></div></footer>
+<script src="../js/site-config.js"></script>
+<script>
+(function() {
+  var match = window.location.pathname.match(/\/categories\/([a-z-]+)\.html/);
+  if (!match) return;
+  var slug = match[1];
+  var cat = CATEGORIES.find(function(c) { return c.slug === slug; });
+  var games = GAMES.filter(function(g) { return g.category === slug; });
+  var grid = document.getElementById('categoryGrid');
+  if (!grid) return;
+  grid.innerHTML = games.map(function(g) {
+    return '<article class="article-card"><div class="article-card-category">' + (cat ? cat.name : slug) + ' · ' + (g.rating > 0 ? g.rating + '/100' : 'TBA') + '</div><h3 class="article-card-title"><a href="../games/' + g.id + '.html">' + g.title + '</a></h3><p class="article-card-excerpt">' + g.description.substring(0,150) + '...</p><div class="article-card-meta"><span>' + g.guides.length + ' guides</span><span>' + g.platforms.join(', ') + '</span></div></article>';
+  }).join('');
+})();
+</script>
+</body>
+</html>
+CATPAGE
+  echo "Created category $cat"
+done
+
+echo "Done batch creating pages"

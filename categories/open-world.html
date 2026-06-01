@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open World Guides — SoloMaster Guides</title>
+<meta name="description" content="Expert guides for the best open world games. GTA VI, Cyberpunk 2077, Kingdom Come 2 and more.">
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-icon">🎮</div>SoloMaster Guides</a>
+    <nav class="header-nav"><a href="../index.html">Home</a><a href="action-rpg.html">Action RPG</a><a href="open-world.html" class="active">Open World</a><a href="horror.html">Horror</a><a href="soulslike.html">Soulslike</a><a href="roguelike.html">Roguelike</a></nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+  </div>
+</header>
+<main class="container">
+  <div class="category-header">
+    <h1>🌍 Open World</h1>
+    <p>Vast worlds to explore at your own pace. Maps, secrets, and completion guides.</p>
+  </div>
+  <div class="article-grid" id="categoryGrid"></div>
+</main>
+<footer class="site-footer"><div class="footer-bottom" style="max-width:1280px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);"><span>&copy; 2026 SoloMaster Guides</span><span>Updated Daily</span></div></footer>
+<script src="../js/site-config.js"></script>
+<script>
+(function() {
+  const grid = document.getElementById('categoryGrid');
+  const catGames = GAMES.filter(g => g.category === 'open-world');
+  grid.innerHTML = catGames.map(g => '<article class="article-card"><div class="article-card-category">Open World · ' + (g.rating > 0 ? g.rating + '/100' : 'TBA') + '</div><h3 class="article-card-title"><a href="../games/' + g.id + '.html">' + g.title + '</a></h3><p class="article-card-excerpt">' + g.description.substring(0, 150) + '...</p><div class="article-card-meta"><span>' + g.guides.length + ' guides</span><span>' + g.platforms.join(', ') + '</span></div></article>').join('');
+})();
+</script>
+</body>
+</html>

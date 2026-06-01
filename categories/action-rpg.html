@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Action RPG Guides — SoloMaster Guides</title>
+<meta name="description" content="Expert guides for the best action RPGs. Gothic Remake, SAROS, Nioh 3, and more. Builds, walkthroughs, boss strategies.">
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7173243111626096" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo"><div class="logo-icon">🎮</div>SoloMaster Guides</a>
+    <nav class="header-nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="action-rpg.html" class="active">Action RPG</a>
+      <a href="open-world.html">Open World</a>
+      <a href="horror.html">Horror</a>
+      <a href="soulslike.html">Soulslike</a>
+      <a href="roguelike.html">Roguelike</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+  </div>
+</header>
+<main class="container">
+  <div class="category-header">
+    <h1>⚔️ Action RPG</h1>
+    <p>Fast-paced combat meets deep RPG progression. Master every parry, build, and boss fight.</p>
+  </div>
+  <div class="article-grid" id="categoryGrid"></div>
+</main>
+<footer class="site-footer">
+  <div class="footer-bottom" style="max-width:1280px;margin:0 auto;padding:16px 24px;border-top:1px solid var(--border);display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);">
+    <span>&copy; 2026 SoloMaster Guides</span><span>Updated Daily — June 1, 2026</span>
+  </div>
+</footer>
+<script src="../js/site-config.js"></script>
+<script>
+(function() {
+  const path = window.location.pathname;
+  const match = path.match(/\/categories\/([a-z-]+)\.html/);
+  if (!match) return;
+  const catSlug = match[1];
+  const cat = CATEGORIES.find(c => c.slug === catSlug);
+  if (cat) document.title = cat.name + ' Guides — SoloMaster Guides';
+  const games = GAMES.filter(g => g.category === catSlug);
+  const grid = document.getElementById('categoryGrid');
+  if (!grid) return;
+  grid.innerHTML = games.map(g => {
+    const guides = g.guides || [];
+    return '<article class="article-card">' +
+      '<div class="article-card-category">' + getCategoryName(g.category) + ' · ' + g.rating + '/100</div>' +
+      '<h3 class="article-card-title"><a href="../games/' + g.id + '.html">' + g.title + '</a></h3>' +
+      '<p class="article-card-excerpt">' + g.description.substring(0, 150) + '...</p>' +
+      '<div class="article-card-meta"><span>' + guides.length + ' guides</span><span>' + g.platforms.join(', ') + '</span></div>' +
+      '</article>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

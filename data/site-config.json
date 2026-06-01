@@ -1,0 +1,644 @@
+{
+  "site": {
+    "name": "SoloMaster Guides",
+    "tagline": "The Ultimate Single-Player Gaming Guide Hub",
+    "description": "Expert guides, tips, and walkthroughs for the world's hottest single-player games. Updated daily.",
+    "url": "https://solomasterguides.com",
+    "language": "en",
+    "currency": "USD"
+  },
+  "categories": [
+    {
+      "id": "action-rpg",
+      "name": "Action RPG",
+      "slug": "action-rpg"
+    },
+    {
+      "id": "open-world",
+      "name": "Open World",
+      "slug": "open-world"
+    },
+    {
+      "id": "horror",
+      "name": "Horror",
+      "slug": "horror"
+    },
+    {
+      "id": "soulslike",
+      "name": "Soulslike",
+      "slug": "soulslike"
+    },
+    {
+      "id": "fps",
+      "name": "FPS",
+      "slug": "fps"
+    },
+    {
+      "id": "rpg",
+      "name": "RPG",
+      "slug": "rpg"
+    },
+    {
+      "id": "roguelike",
+      "name": "Roguelike",
+      "slug": "roguelike"
+    },
+    {
+      "id": "metroidvania",
+      "name": "Metroidvania",
+      "slug": "metroidvania"
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "slug": "survival"
+    },
+    {
+      "id": "puzzle-adventure",
+      "name": "Puzzle Adventure",
+      "slug": "puzzle-adventure"
+    }
+  ],
+  "games": [
+    {
+      "id": "gothic-1-remake",
+      "title": "Gothic 1 Remake",
+      "releaseDate": "2026-06-05",
+      "developer": "Alkimia Interactive",
+      "publisher": "THQ Nordic",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "action-rpg",
+      "rating": 87,
+      "image": "img/gothic-remake.jpg",
+      "description": "The legendary 2001 RPG returns with a ground-up remake. Explore the penal colony of the Valley of Mines with modernized combat, expanded questlines, and next-gen NPC AI in Unreal Engine 5.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginners Guide",
+          "slug": "beginners-guide",
+          "excerpt": "Guide for Beginners Guide.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "25 Advanced Tips & Secrets",
+          "slug": "advanced-tips",
+          "excerpt": "Expert guide for 25 Advanced Tips & Secrets — tips, strategies, and walkthroughs.",
+          "date": "2026-05-31"
+        },
+        {
+          "title": "Faction Guide",
+          "slug": "faction-guide",
+          "excerpt": "Expert guide: Faction Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Best Builds",
+          "slug": "best-builds",
+          "excerpt": "Expert guide: Best Builds — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Secret Locations",
+          "slug": "secret-locations",
+          "excerpt": "Expert guide: Secret Locations — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "solarpunk",
+      "title": "Solarpunk",
+      "releaseDate": "2026-06-08",
+      "developer": "Cyberwave",
+      "publisher": "rokaplay",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X",
+        "Switch 2"
+      ],
+      "category": "survival",
+      "rating": 85,
+      "image": "img/solarpunk.jpg",
+      "description": "The #1 most-wishlisted game on Steam. A cozy open-world survival game set across floating islands. Build airships, farm floating gardens, harness solar energy, and explore a stunning procedurally-generated sky world.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Getting Started",
+          "slug": "getting-started",
+          "excerpt": "Guide for Getting Started.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "25 Advanced Tips & Secrets",
+          "slug": "advanced-tips",
+          "excerpt": "Expert guide for 25 Advanced Tips & Secrets — tips, strategies, and walkthroughs.",
+          "date": "2026-05-31"
+        },
+        {
+          "title": "Airship Building",
+          "slug": "airship-building",
+          "excerpt": "Expert guide: Airship Building — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Energy Management",
+          "slug": "energy-management",
+          "excerpt": "Expert guide: Energy Management — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Best Crops",
+          "slug": "best-crops",
+          "excerpt": "Expert guide: Best Crops — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "nioh-3",
+      "title": "Nioh 3",
+      "releaseDate": "2026-03-14",
+      "developer": "Team Ninja",
+      "publisher": "Koei Tecmo",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "category": "soulslike",
+      "rating": 86,
+      "image": "img/nioh-3.jpg",
+      "description": "Team Ninja's punishing action RPG returns with a dual-form combat system — seamlessly switch between Samurai and Ninja stances. Set in an unforgiving dark fantasy version of Japan's Warring States period.",
+      "featured": true,
+      "trending": false,
+      "guides": [
+        {
+          "title": "Combat Mastery",
+          "slug": "combat-mastery",
+          "excerpt": "Guide for Combat Mastery.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Ki Management",
+          "slug": "ki-management",
+          "excerpt": "Expert guide: Ki Management — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Stance Switching Guide",
+          "slug": "stance-switching-guide",
+          "excerpt": "Expert guide: Stance Switching Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Boss Strategies",
+          "slug": "boss-strategies",
+          "excerpt": "Expert guide: Boss Strategies — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Best Weapons",
+          "slug": "best-weapons",
+          "excerpt": "Expert guide: Best Weapons — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "resident-evil-requiem",
+      "title": "Resident Evil Requiem",
+      "releaseDate": "2026-02-21",
+      "developer": "Capcom",
+      "publisher": "Capcom",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "horror",
+      "rating": 89,
+      "image": "img/re-requiem.jpg",
+      "description": "A complete reimagining of Raccoon City. Experience the outbreak through new characters as dynamic enemy AI, environmental destruction, and relentless horror reshape the city block by block.",
+      "featured": true,
+      "trending": false,
+      "guides": [
+        {
+          "title": "Survival Guide",
+          "slug": "survival-guide",
+          "excerpt": "Guide for Survival Guide.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Endings Guide",
+          "slug": "endings-guide",
+          "excerpt": "Expert guide: Endings Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Weapon Locations",
+          "slug": "weapon-locations",
+          "excerpt": "Expert guide: Weapon Locations — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "All Puzzles",
+          "slug": "all-puzzles",
+          "excerpt": "Expert guide: All Puzzles — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Speedrun Tips",
+          "slug": "speedrun-tips",
+          "excerpt": "Expert guide: Speedrun Tips — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "slay-the-spire-2",
+      "title": "Slay the Spire 2",
+      "releaseDate": "2026-03-18",
+      "developer": "Mega Crit",
+      "publisher": "Mega Crit",
+      "platforms": [
+        "PC"
+      ],
+      "category": "roguelike",
+      "rating": 90,
+      "image": "img/sts-2.jpg",
+      "description": "The long-awaited sequel to the game that defined a genre. Two new characters, revamped relics, endless mode, and a branching multi-act structure. Over 5 million copies sold in launch month.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Best Builds & Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Expert guide for Best Builds & Loadouts Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Paladin Decks",
+          "slug": "paladin-decks",
+          "excerpt": "Expert guide: Paladin Decks — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Ascension Guide",
+          "slug": "ascension-guide",
+          "excerpt": "Expert guide: Ascension Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Beginners Guide",
+          "slug": "beginners-guide",
+          "excerpt": "Expert guide: Beginners Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Relic Combos",
+          "slug": "relic-combos",
+          "excerpt": "Expert guide: Relic Combos — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Necromancer Builds",
+          "slug": "necromancer-builds",
+          "excerpt": "Expert guide: Necromancer Builds — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "road-to-vostok",
+      "title": "Road to Vostok",
+      "releaseDate": "2026-04-10",
+      "developer": "Antti (Solo Dev)",
+      "publisher": "Self-Published",
+      "platforms": [
+        "PC"
+      ],
+      "category": "fps",
+      "rating": 84,
+      "image": "img/road-to-vostok.jpg",
+      "description": "A solo extraction shooter by a single Finnish developer that took Steam by storm — 140K copies in 5 days. Survive the harsh, atmospheric border zone between Finland and Russia with realistic gunplay and permadeath.",
+      "featured": false,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Survival Basics",
+          "slug": "survival-basics",
+          "excerpt": "Guide for Survival Basics.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Weapon Mods",
+          "slug": "weapon-mods",
+          "excerpt": "Expert guide: Weapon Mods — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Map Guide",
+          "slug": "map-guide",
+          "excerpt": "Expert guide: Map Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Extraction Points",
+          "slug": "extraction-points",
+          "excerpt": "Expert guide: Extraction Points — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "mouse-pi-for-hire",
+      "title": "Mouse: P.I. For Hire",
+      "releaseDate": "2026-04-22",
+      "developer": "Fumi Games",
+      "publisher": "Fumi Games",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "fps",
+      "rating": 88,
+      "image": "img/mouse-pi.jpg",
+      "description": "A stunning noir-inspired boomer shooter with hand-drawn 1930s cartoon aesthetics. Solve cases, blast gangsters, and unravel a conspiracy in a corrupt city — 730K copies sold, $20M+ in revenue.",
+      "featured": false,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Weapons Guide",
+          "slug": "weapons-guide",
+          "excerpt": "Guide for Weapons Guide.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Case Solutions",
+          "slug": "case-solutions",
+          "excerpt": "Expert guide: Case Solutions — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Best Perks",
+          "slug": "best-perks",
+          "excerpt": "Expert guide: Best Perks — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Secret Collectibles",
+          "slug": "secret-collectibles",
+          "excerpt": "Expert guide: Secret Collectibles — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "clair-obscur-expedition-33",
+      "title": "Clair Obscur: Expedition 33",
+      "releaseDate": "2026-01-28",
+      "developer": "Sandfall Interactive",
+      "publisher": "Kepler Interactive",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "rpg",
+      "rating": 92,
+      "image": "img/clair-obscur.jpg",
+      "description": "The highest-rated game of 2026. A breathtaking turn-based RPG set in a Belle Époque-inspired world. Lead Expedition 33 on a desperate mission to stop the Paintress, a god-like being who paints death upon the world.",
+      "featured": true,
+      "trending": false,
+      "guides": [
+        {
+          "title": "Complete Walkthrough",
+          "slug": "complete-walkthrough",
+          "excerpt": "Guide for Complete Walkthrough.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Best Party",
+          "slug": "best-party",
+          "excerpt": "Expert guide: Best Party — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "All Endings",
+          "slug": "all-endings",
+          "excerpt": "Expert guide: All Endings — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Secret Bosses",
+          "slug": "secret-bosses",
+          "excerpt": "Expert guide: Secret Bosses — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Character Builds",
+          "slug": "character-builds",
+          "excerpt": "Expert guide: Character Builds — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "baldurs-gate-3",
+      "title": "Baldur's Gate 3",
+      "releaseDate": "2023-08-03",
+      "developer": "Larian Studios",
+      "publisher": "Larian Studios",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "rpg",
+      "rating": 97,
+      "image": "img/bg3.jpg",
+      "description": "Still dominating in 2026. The definitive D&D CRPG with near-infinite player choice, rich companion stories, and tactical turn-based combat. Over 15 million copies sold — still the gold standard for RPGs.",
+      "featured": true,
+      "trending": false,
+      "guides": [
+        {
+          "title": "Class Tier List",
+          "slug": "class-tier-list",
+          "excerpt": "Guide for Class Tier List.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Best Party",
+          "slug": "best-party",
+          "excerpt": "Expert guide: Best Party — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Honor Mode Guide",
+          "slug": "honor-mode-guide",
+          "excerpt": "Expert guide: Honor Mode Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Hidden Quests",
+          "slug": "hidden-quests",
+          "excerpt": "Expert guide: Hidden Quests — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Romance Guide",
+          "slug": "romance-guide",
+          "excerpt": "Expert guide: Romance Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "black-myth-wukong",
+      "title": "Black Myth: Wukong",
+      "releaseDate": "2024-08-20",
+      "developer": "Game Science",
+      "publisher": "Game Science",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "soulslike",
+      "rating": 95,
+      "image": "img/wukong.jpg",
+      "description": "The groundbreaking Chinese mythology action RPG. Face 90+ unique bosses as the Destined One in a visually stunning retelling of Journey to the West. Still getting major content updates in 2026.",
+      "featured": false,
+      "trending": false,
+      "guides": [
+        {
+          "title": "All Boss Guide",
+          "slug": "all-boss-guide",
+          "excerpt": "Guide for All Boss Guide.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Platinum Trophy Guide",
+          "slug": "platinum-trophy-guide",
+          "excerpt": "Expert guide: Platinum Trophy Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Best Transformations",
+          "slug": "best-transformations",
+          "excerpt": "Expert guide: Best Transformations — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Secret Endings",
+          "slug": "secret-endings",
+          "excerpt": "Expert guide: Secret Endings — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "saros",
+      "title": "SAROS",
+      "releaseDate": "2026-05-15",
+      "developer": "Housemarque",
+      "publisher": "Sony Interactive",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "category": "action-rpg",
+      "rating": 88,
+      "image": "img/saros.jpg",
+      "description": "Housemarque's ambitious follow-up to Returnal. A haunting third-person action game set on a dying alien world where every death reshapes the planet and your character evolves in unexpected ways.",
+      "featured": false,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Combat Fundamentals",
+          "slug": "combat-fundamentals",
+          "excerpt": "Guide for Combat Fundamentals.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Death Mechanics",
+          "slug": "death-mechanics",
+          "excerpt": "Expert guide: Death Mechanics — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Best Upgrades",
+          "slug": "best-upgrades",
+          "excerpt": "Expert guide: Best Upgrades — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Lore Explained",
+          "slug": "lore-explained",
+          "excerpt": "Expert guide: Lore Explained — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "id": "gta-6",
+      "title": "Grand Theft Auto VI",
+      "releaseDate": "2026-11-19",
+      "developer": "Rockstar Games",
+      "publisher": "Take-Two Interactive",
+      "platforms": [
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "open-world",
+      "rating": 0,
+      "image": "img/gta-6.jpg",
+      "description": "The most anticipated game in history. Return to Vice City with dual protagonists Lucia and Jason. Rockstar's biggest open world ever, launching November 19. Pre-release coverage and analysis.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Everything We Know",
+          "slug": "everything-we-know",
+          "excerpt": "Guide for Everything We Know.",
+          "date": "2026-05-01"
+        },
+        {
+          "title": "Pre Order Guide",
+          "slug": "pre-order-guide",
+          "excerpt": "Expert guide: Pre Order Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Characters Guide",
+          "slug": "characters-guide",
+          "excerpt": "Expert guide: Characters Guide — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        },
+        {
+          "title": "Vice City Map Analysis",
+          "slug": "vice-city-map-analysis",
+          "excerpt": "Expert guide: Vice City Map Analysis — tips, strategies, and walkthroughs.",
+          "date": "2026-06-01"
+        }
+      ]
+    }
+  ],
+  "adSettings": {
+    "publisherId": "ca-pub-XXXXXXXXXXXXXXXX",
+    "slots": {
+      "header": "1234567890",
+      "sidebar": "2345678901",
+      "in-content-1": "3456789012",
+      "in-content-2": "4567890123",
+      "footer": "5678901234"
+    }
+  }
+}

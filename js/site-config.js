@@ -7,7 +7,7 @@ const SITE_CONFIG = {
   tagline: "The Ultimate Single-Player Gaming Guide Hub",
   description: "Expert guides, tips, and walkthroughs for the world's hottest single-player games. Updated daily.",
   url: "https://solomasterguides.com",
-  lastUpdated: "2026-06-01",
+  lastUpdated: "2026-06-02",
 
   adClient: "ca-pub-7173243111626096",
   adSlots: {

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs>
+<radialGradient id="doom-glow" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#ef4444" stop-opacity="0.2"/><stop offset="100%" stop-color="#0a0000" stop-opacity="0"/></radialGradient>
+<linearGradient id="doom-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d0000"/><stop offset="100%" stop-color="#050000"/></linearGradient>
+</defs>
+<rect width="640" height="360" fill="url(#doom-bg)"/>
+<rect width="640" height="360" fill="url(#doom-glow)"/>
+<!-- Pentagram -->
+<polygon points="320,60 350,150 450,150 370,200 400,290 320,240 240,290 270,200 190,150 290,150" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.25"/>
+<!-- Slayer symbol -->
+<path d="M260 200 L290 210 L280 240 M380 200 L350 210 L360 240 M320 60 L320 140 M290 150 L270 130 M350 150 L370 130" stroke="#ef4444" stroke-width="1.5" opacity="0.2"/>
+<text x="320" y="275" text-anchor="middle" fill="#ef4444" font-family="Georgia,serif" font-size="48" font-weight="bold" letter-spacing="6">DOOM</text>
+<text x="320" y="315" text-anchor="middle" fill="#f87171" font-family="Georgia,serif" font-size="16" letter-spacing="3">THE DARK AGES</text>
+<text x="320" y="345" text-anchor="middle" fill="rgba(239,68,68,0.35)" font-family="sans-serif" font-size="10">ID SOFTWARE · ★91</text>
+</svg>

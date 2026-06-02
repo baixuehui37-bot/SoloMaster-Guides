@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="ff-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a1a"/><stop offset="50%" stop-color="#06060f"/><stop offset="100%" stop-color="#020204"/></linearGradient>
+<radialGradient id="ff-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#22d3ee" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+</defs>
+<rect width="640" height="360" fill="url(#ff-bg)"/>
+<rect width="640" height="360" fill="url(#ff-glow)"/>
+<!-- Meteor / Lifestream -->
+<circle cx="320" cy="150" r="35" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.2"/>
+<circle cx="320" cy="150" r="50" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.12"/>
+<circle cx="320" cy="150" r="70" fill="none" stroke="#0891b2" stroke-width="1" opacity="0.08"/>
+<!-- Buster Sword silhouette -->
+<line x1="460" y1="60" x2="470" y2="280" stroke="#22d3ee" stroke-width="3" opacity="0.15" stroke-linecap="round"/>
+<line x1="455" y1="270" x2="485" y2="280" stroke="#22d3ee" stroke-width="5" opacity="0.1" stroke-linecap="round"/>
+<text x="320" y="285" text-anchor="middle" fill="#22d3ee" font-family="Georgia,serif" font-size="24" font-weight="bold" letter-spacing="2">FINAL FANTASY VII</text>
+<text x="320" y="318" text-anchor="middle" fill="#06b6d4" font-family="Georgia,serif" font-size="18" letter-spacing="5">REBIRTH</text>
+<text x="320" y="346" text-anchor="middle" fill="rgba(34,211,238,0.3)" font-family="sans-serif" font-size="10">SQUARE ENIX · ★92 · PS5 + PC</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="kc-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1808"/><stop offset="40%" stop-color="#0d0a02"/><stop offset="100%" stop-color="#0a0800"/></linearGradient>
+</defs>
+<rect width="640" height="360" fill="url(#kc-bg)"/>
+<!-- Medieval shield shape -->
+<path d="M320 80 L260 130 L260 220 Q260 280 320 310 Q380 280 380 220 L380 130 Z" fill="none" stroke="#eab308" stroke-width="2" opacity="0.25"/>
+<path d="M320 100 L270 140 L270 220 Q270 270 320 295 Q370 270 370 220 L370 140 Z" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.15"/>
+<!-- Cross on shield -->
+<line x1="320" y1="120" x2="320" y2="270" stroke="#eab308" stroke-width="1.5" opacity="0.15"/>
+<line x1="290" y1="180" x2="350" y2="180" stroke="#eab308" stroke-width="1.5" opacity="0.15"/>
+<!-- Sword -->
+<line x1="420" y1="60" x2="480" y2="280" stroke="#fbbf24" stroke-width="2.5" opacity="0.2" stroke-linecap="round"/>
+<line x1="480" y1="270" x2="475" y2="290" stroke="#fbbf24" stroke-width="4" opacity="0.15" stroke-linecap="round"/>
+<text x="320" y="280" text-anchor="middle" fill="#fbbf24" font-family="Georgia,serif" font-size="30" font-weight="bold">KINGDOM COME</text>
+<text x="320" y="315" text-anchor="middle" fill="#eab308" font-family="Georgia,serif" font-size="16">DELIVERANCE II</text>
+<text x="320" y="345" text-anchor="middle" fill="rgba(234,179,8,0.35)" font-family="sans-serif" font-size="10">WARHORSE STUDIOS · ★88</text>
+</svg>

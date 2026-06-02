@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs>
+<linearGradient id="hk-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a0a14"/><stop offset="100%" stop-color="#050510"/></linearGradient>
+<radialGradient id="hk-glow" cx="50%" cy="45%" r="45%"><stop offset="0%" stop-color="#c084fc" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+</defs>
+<rect width="640" height="360" fill="url(#hk-bg)"/>
+<rect width="640" height="360" fill="url(#hk-glow)"/>
+<!-- Hornet needle -->
+<line x1="360" y1="60" x2="450" y2="280" stroke="#c084fc" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+<!-- Silksong thread -->
+<path d="M450 280 Q480 240 460 200 Q440 160 470 120 Q490 90 520 80" fill="none" stroke="#a78bfa" stroke-width="0.8" opacity="0.15"/>
+<!-- Nail shape -->
+<line x1="200" y1="220" x2="280" y2="120" stroke="#c084fc" stroke-width="2" opacity="0.15" stroke-linecap="round"/>
+<text x="320" y="275" text-anchor="middle" fill="#c084fc" font-family="Georgia,serif" font-size="32" font-weight="bold" letter-spacing="2">HOLLOW KNIGHT</text>
+<text x="320" y="315" text-anchor="middle" fill="#a78bfa" font-family="Georgia,serif" font-size="20" letter-spacing="5">SILKSONG</text>
+<text x="320" y="346" text-anchor="middle" fill="rgba(192,132,252,0.35)" font-family="sans-serif" font-size="10">TEAM CHERRY · ★94 · MOST ANTICIPATED</text>
+</svg>

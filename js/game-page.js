@@ -37,7 +37,7 @@
 
       <div class="game-hero">
         <div class="game-hero-image" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
-          <img src="../img/${game.id === 'gothic-1-remake' ? 'gothic-remake' : game.id === 'clair-obscur-expedition-33' ? 'clair-obscur' : game.id === 'baldurs-gate-3' ? 'bg3' : game.id === 'black-myth-wukong' ? 'wukong' : game.id === 'resident-evil-requiem' ? 're-requiem' : game.id === 'slay-the-spire-2' ? 'sts-2' : game.id === 'mouse-pi-for-hire' ? 'mouse-pi' : game.id === 'road-to-vostok' ? 'road-to-vostok' : game.id === 'gta-6' ? 'gta-6' : game.id}.svg" alt="${game.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          <img src="../img/${game.id}.svg" alt="${game.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=font-size:5rem;display:flex;align-items:center;justify-content:center;height:100%'>🎮</div>'">
         </div>
         <div class="game-hero-info">
           <span style="display:inline-block;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:4px 14px;border-radius:20px;margin-bottom:12px;">${categoryName}</span>

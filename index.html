@@ -1,220 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SoloMaster Guides — The Ultimate Single-Player Gaming Guide Hub</title>
-<meta name="description" content="Expert guides, tips, and walkthroughs for the world's hottest single-player games. Gothic Remake, Solarpunk, Nioh 3, Resident Evil Requiem, and more. Updated daily.">
+<title>SoloMaster Guides — The Ultimate Single-Player Gaming Guide Hub | Expert Walkthroughs & Tips 2026</title>
+<meta name="description" content="Expert guides, walkthroughs, builds, and secrets for the hottest single-player games of 2026 — Gothic Remake, Solarpunk, Nioh 3, GTA VI, Baldur's Gate 3, and 15+ more. Updated daily.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://solomasterguides.com/">
 <link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Google AdSense -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7173243111626096" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SoloMaster Guides","url":"https://solomasterguides.com","description":"Expert guides for the hottest single-player games. Updated daily."}</script>
 </head>
 <body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="readingProgress"></div>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo">
-      <div class="logo-icon">🎮</div>
-      SoloMaster Guides
+      <div class="logo-icon">S</div>
+      SoloMaster
     </a>
     <nav class="header-nav" id="mainNav">
       <a href="/" class="active">Home</a>
       <a href="categories/action-rpg.html">Action RPG</a>
-      <a href="categories/open-world.html">Open World</a>
-      <a href="categories/horror.html">Horror</a>
       <a href="categories/soulslike.html">Soulslike</a>
+      <a href="categories/open-world.html">Open World</a>
+      <a href="categories/fps.html">FPS</a>
+      <a href="categories/rpg.html">RPG</a>
+      <a href="categories/horror.html">Horror</a>
+      <a href="categories/survival.html">Survival</a>
       <a href="categories/roguelike.html">Roguelike</a>
     </nav>
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search guides...">
-      <button id="searchBtn" aria-label="Search">🔍</button>
+    <div class="search-wrap">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search 76+ guides...">
+        <span style="color:var(--text-muted);font-size:0.8rem;">🔍</span>
+      </div>
+      <div class="search-dropdown" id="searchDropdown"></div>
     </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+    <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode">🌙</button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" style="display:none;">☰</button>
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>Master Every Solo Adventure</h1>
-    <p>Expert guides, walkthroughs, builds, and secrets for 2026's most epic single-player games. No paywalls, no filler — just pure gaming mastery.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-value" id="guideCount">85+</div>
-        <div class="hero-stat-label">In-Depth Guides</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">12</div>
-        <div class="hero-stat-label">Games Covered</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">30K+</div>
-        <div class="hero-stat-label">Monthly Readers</div>
-      </div>
-    </div>
-  </div>
+<!-- Hero Carousel -->
+<section class="hero-carousel" id="heroCarousel">
+  <div class="hero-track" id="heroTrack"></div>
+  <button class="hero-prev" id="heroPrev">‹</button>
+  <button class="hero-next" id="heroNext">›</button>
+  <div class="hero-nav" id="heroNav"></div>
 </section>
 
-<!-- Ad Slot - Header -->
 <div class="container">
-  <div class="ad-slot ad-header" id="ad-header">
-    <!-- Google AdSense Header Ad -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-7173243111626096"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
+  <div class="ad-slot ad-header">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7173243111626096" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
   </div>
-</div>
 
-<div class="container">
   <div class="main-layout">
-
-    <!-- Main Content -->
     <main class="content-area">
-
-      <!-- Featured Games Section -->
+      <!-- Trending Horizontal Scroll -->
       <div class="section-header">
-        <h2 class="section-title">🔥 Featured Games</h2>
-        <a href="#" class="section-link">View All Games →</a>
+        <h2 class="section-title">🔥 Trending Now</h2>
+        <a href="#" class="section-link">All Games →</a>
+      </div>
+      <div class="trending-scroll"><div class="trending-row" id="trendingRow"></div></div>
+
+      <!-- Featured Games -->
+      <div class="section-header" style="margin-top:40px">
+        <h2 class="section-title">⭐ Featured Games</h2>
+      </div>
+      <div class="featured-grid" id="featuredGrid"></div>
+
+      <!-- Ad In-Content -->
+      <div class="ad-slot ad-incontent">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7173243111626096" data-ad-slot="3456789012" data-ad-format="auto" data-full-width-responsive="true"></ins>
       </div>
 
-      <div class="featured-grid" id="featuredGrid">
-        <!-- Populated by JS -->
-      </div>
-
-      <!-- Latest Guides Section -->
+      <!-- Latest Guides -->
       <div class="section-header">
         <h2 class="section-title">📝 Latest Guides</h2>
         <a href="#" class="section-link">All Guides →</a>
       </div>
+      <div class="article-grid" id="latestGuides"></div>
 
-      <div class="article-grid" id="latestGuides">
-        <!-- Populated by JS -->
-      </div>
-
-      <!-- Ad Slot - In Content -->
-      <div class="ad-slot ad-incontent" id="ad-incontent">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7173243111626096"
-             data-ad-slot="3456789012"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-      </div>
-
-      <!-- Trending Now Section -->
-      <div class="section-header">
-        <h2 class="section-title">⚡ Trending Now</h2>
-      </div>
-
-      <div class="article-grid" id="trendingGrid">
-        <!-- Populated by JS -->
-      </div>
-
-      <!-- Pagination -->
-      <div class="pagination">
-        <button class="page-btn active">1</button>
-        <button class="page-btn">2</button>
-        <button class="page-btn">3</button>
-        <button class="page-btn">→</button>
+      <div class="pagination" style="display:flex;justify-content:center;gap:8px;padding:20px 0">
+        <button class="page-btn active">1</button><button class="page-btn">2</button><button class="page-btn">3</button><button class="page-btn">→</button>
       </div>
     </main>
 
-    <!-- Sidebar -->
     <aside class="sidebar">
-
-      <!-- Trending Games Widget -->
       <div class="sidebar-widget">
         <h3 class="sidebar-widget-title">🔥 Hot Right Now</h3>
-        <ol class="trending-list" id="trendingList">
-          <!-- Populated by JS -->
-        </ol>
+        <ol class="trending-list" id="trendingList"></ol>
       </div>
-
-      <!-- Ad Slot - Sidebar -->
-      <div class="ad-slot ad-sidebar" id="ad-sidebar">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7173243111626096"
-             data-ad-slot="2345678901"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+      <div class="ad-slot ad-sidebar">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7173243111626096" data-ad-slot="2345678901" data-ad-format="auto" data-full-width-responsive="true"></ins>
       </div>
-
-      <!-- Categories Widget -->
       <div class="sidebar-widget">
         <h3 class="sidebar-widget-title">🎯 Browse by Genre</h3>
-        <div class="category-tags" id="categoryTags">
-          <!-- Populated by JS -->
-        </div>
+        <div class="category-tags" id="categoryTags"></div>
       </div>
-
-      <!-- Newsletter Widget -->
       <div class="sidebar-widget">
-        <h3 class="sidebar-widget-title">📧 Never Miss a Guide</h3>
-        <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:12px;">Get the latest walkthroughs and tips delivered to your inbox.</p>
-        <input type="email" class="newsletter-input" placeholder="your@email.com">
-        <button class="btn btn-primary-full">Subscribe</button>
+        <h3 class="sidebar-widget-title">📧 Weekly Roundup</h3>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:10px;">Get the best new guides every Friday.</p>
+        <input type="email" class="newsletter-input" placeholder="your@email.com" id="newsletterEmail">
+        <button class="btn btn-primary" style="width:100%" onclick="subscribeNewsletter()">Subscribe Free</button>
       </div>
     </aside>
   </div>
 </div>
 
-<!-- Footer -->
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-col">
       <h4>About SoloMaster</h4>
-      <p>We're dedicated to creating the most comprehensive, up-to-date guides for the best single-player games. Every guide is hand-crafted by gamers who've completed the game multiple times.</p>
+      <p>The internet's most comprehensive single-player gaming guide hub. 76+ expert guides across 20 games. Every guide tested and verified. Updated daily.</p>
     </div>
     <div class="footer-col">
       <h4>Top Games</h4>
-      <ul>
-        <li><a href="games/gothic-1-remake.html">Gothic 1 Remake</a></li>
-        <li><a href="games/solarpunk.html">Solarpunk</a></li>
-        <li><a href="games/clair-obscur-expedition-33.html">Clair Obscur</a></li>
-        <li><a href="games/nioh-3.html">Nioh 3</a></li>
-        <li><a href="games/gta-6.html">GTA VI</a></li>
-      </ul>
+      <ul><li><a href="games/gothic-1-remake.html">Gothic 1 Remake</a></li><li><a href="games/solarpunk.html">Solarpunk</a></li><li><a href="games/gta-6.html">GTA VI</a></li><li><a href="games/baldurs-gate-3.html">Baldur's Gate 3</a></li><li><a href="games/nioh-3.html">Nioh 3</a></li></ul>
     </div>
     <div class="footer-col">
       <h4>Genres</h4>
-      <ul>
-        <li><a href="categories/action-rpg.html">Action RPG</a></li>
-        <li><a href="categories/open-world.html">Open World</a></li>
-        <li><a href="categories/horror.html">Horror</a></li>
-        <li><a href="categories/soulslike.html">Soulslike</a></li>
-        <li><a href="categories/roguelike.html">Roguelike</a></li>
-      </ul>
+      <ul><li><a href="categories/action-rpg.html">Action RPG</a></li><li><a href="categories/soulslike.html">Soulslike</a></li><li><a href="categories/open-world.html">Open World</a></li><li><a href="categories/fps.html">FPS</a></li><li><a href="categories/rpg.html">RPG</a></li></ul>
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Cookie Policy</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+      <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">Contact</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 SoloMaster Guides. All rights reserved. Not affiliated with any game publisher.</span>
-    <span>Updated Daily — June 1, 2026</span>
+    <span>&copy; 2026 SoloMaster Guides. Not affiliated with any game publisher.</span>
+    <span>76 Guides · Updated June 2, 2026</span>
   </div>
 </footer>
 
 <script src="js/site-config.js"></script>
-<script src="js/main.js"></script>
-<script>
-  // Initialize AdSense ads
-  (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<script src="js/main-v2.js"></script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>

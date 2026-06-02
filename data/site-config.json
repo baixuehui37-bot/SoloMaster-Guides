@@ -749,6 +749,395 @@
           "date": "2026-06-02"
         }
       ]
+    },
+    {
+      "id": "elden-ring-shadow-erdtree",
+      "title": "Elden Ring Shadow of the Erdtree",
+      "releaseDate": "2025-01-01",
+      "developer": "FromSoftware",
+      "publisher": "FromSoftware",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "soulslike",
+      "rating": 95,
+      "description": "In-depth guide coverage for Elden Ring Shadow of the Erdtree by FromSoftware. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Elden Ring Shadow of the Erdtree.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Elden Ring Shadow of the Erdtree.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Elden Ring Shadow of the Erdtree.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Elden Ring Shadow of the Erdtree.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Elden Ring Shadow of the Erdtree.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "kingdom-come-2",
+      "title": "Kingdom Come Deliverance 2",
+      "releaseDate": "2025-01-01",
+      "developer": "Warhorse Studios",
+      "publisher": "Warhorse Studios",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "rpg",
+      "rating": 88,
+      "description": "In-depth guide coverage for Kingdom Come Deliverance 2 by Warhorse Studios. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": false,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Kingdom Come Deliverance 2.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Kingdom Come Deliverance 2.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Kingdom Come Deliverance 2.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Kingdom Come Deliverance 2.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Kingdom Come Deliverance 2.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "doom-dark-ages",
+      "title": "DOOM The Dark Ages",
+      "releaseDate": "2025-01-01",
+      "developer": "id Software",
+      "publisher": "id Software",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "fps",
+      "rating": 91,
+      "description": "In-depth guide coverage for DOOM The Dark Ages by id Software. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in DOOM The Dark Ages.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in DOOM The Dark Ages.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in DOOM The Dark Ages.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in DOOM The Dark Ages.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in DOOM The Dark Ages.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "death-stranding-2",
+      "title": "Death Stranding 2 On the Beach",
+      "releaseDate": "2025-01-01",
+      "developer": "Kojima Productions",
+      "publisher": "Kojima Productions",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "category": "action-rpg",
+      "rating": 90,
+      "description": "In-depth guide coverage for Death Stranding 2 On the Beach by Kojima Productions. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Death Stranding 2 On the Beach.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Death Stranding 2 On the Beach.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Death Stranding 2 On the Beach.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Death Stranding 2 On the Beach.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Death Stranding 2 On the Beach.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "metroid-prime-4",
+      "title": "Metroid Prime 4 Beyond",
+      "releaseDate": "2025-01-01",
+      "developer": "Retro Studios",
+      "publisher": "Retro Studios",
+      "platforms": [
+        "Switch 2"
+      ],
+      "category": "fps",
+      "rating": 93,
+      "description": "In-depth guide coverage for Metroid Prime 4 Beyond by Retro Studios. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Metroid Prime 4 Beyond.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Metroid Prime 4 Beyond.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Metroid Prime 4 Beyond.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Metroid Prime 4 Beyond.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Metroid Prime 4 Beyond.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "hollow-knight-silksong",
+      "title": "Hollow Knight Silksong",
+      "releaseDate": "2025-01-01",
+      "developer": "Team Cherry",
+      "publisher": "Team Cherry",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X",
+        "Switch 2"
+      ],
+      "category": "metroidvania",
+      "rating": 94,
+      "description": "In-depth guide coverage for Hollow Knight Silksong by Team Cherry. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Hollow Knight Silksong.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Hollow Knight Silksong.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Hollow Knight Silksong.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Hollow Knight Silksong.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Hollow Knight Silksong.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "ff7-rebirth",
+      "title": "Final Fantasy VII Rebirth",
+      "releaseDate": "2025-01-01",
+      "developer": "Square Enix",
+      "publisher": "Square Enix",
+      "platforms": [
+        "PS5",
+        "PC"
+      ],
+      "category": "rpg",
+      "rating": 92,
+      "description": "In-depth guide coverage for Final Fantasy VII Rebirth by Square Enix. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": true,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Final Fantasy VII Rebirth.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Final Fantasy VII Rebirth.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Final Fantasy VII Rebirth.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Final Fantasy VII Rebirth.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Final Fantasy VII Rebirth.",
+          "date": "2026-06-02"
+        }
+      ]
+    },
+    {
+      "id": "monster-hunter-wilds",
+      "title": "Monster Hunter Wilds",
+      "releaseDate": "2025-01-01",
+      "developer": "Capcom",
+      "publisher": "Capcom",
+      "platforms": [
+        "PC",
+        "PS5",
+        "Xbox Series X"
+      ],
+      "category": "action-rpg",
+      "rating": 89,
+      "description": "In-depth guide coverage for Monster Hunter Wilds by Capcom. Beginner guides, boss strategies, builds, secrets, and achievements.",
+      "featured": false,
+      "trending": true,
+      "guides": [
+        {
+          "title": "Beginner Guide Getting Started",
+          "slug": "beginners-guide",
+          "excerpt": "Complete guide for beginner guide getting started in Monster Hunter Wilds.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Best Builds and Loadouts Guide",
+          "slug": "best-builds",
+          "excerpt": "Complete guide for best builds and loadouts guide in Monster Hunter Wilds.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Complete Boss Guide All Bosses",
+          "slug": "boss-guide",
+          "excerpt": "Complete guide for complete boss guide all bosses in Monster Hunter Wilds.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Secret Locations and Hidden Items",
+          "slug": "secret-locations",
+          "excerpt": "Complete guide for secret locations and hidden items in Monster Hunter Wilds.",
+          "date": "2026-06-02"
+        },
+        {
+          "title": "Achievement and Trophy Guide",
+          "slug": "achievement-guide",
+          "excerpt": "Complete guide for achievement and trophy guide in Monster Hunter Wilds.",
+          "date": "2026-06-02"
+        }
+      ]
     }
   ],
   "adSettings": {

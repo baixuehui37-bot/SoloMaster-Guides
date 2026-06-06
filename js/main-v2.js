@@ -6,28 +6,55 @@
 (function() {
   'use strict';
 
+  // Universal image name resolver — tries gameId.svg, falls back gracefully
+  function getGameImg(gameId) {
+    // Map known mismatches from data/site-config.json
+    var knownMap = {
+      'gothic-1-remake': 'gothic-remake',
+      'clair-obscur-expedition-33': 'clair-obscur',
+      'baldurs-gate-3': 'bg3',
+      'black-myth-wukong': 'wukong',
+      'resident-evil-requiem': 're-requiem',
+      'slay-the-spire-2': 'sts-2',
+      'mouse-pi-for-hire': 'mouse-pi',
+      'elden-ring-shadow-erdtree': 'elden-ring-shadow-erdtree',
+      'kingdom-come-2': 'kingdom-come-2',
+      'doom-dark-ages': 'doom-dark-ages',
+      'death-stranding-2': 'death-stranding-2',
+      'metroid-prime-4': 'metroid-prime-4',
+      'hollow-knight-silksong': 'hollow-knight-silksong',
+      'ff7-rebirth': 'ff7-rebirth',
+      'monster-hunter-wilds': 'monster-hunter-wilds',
+      'nioh-3': 'nioh-3',
+      'solarpunk': 'solarpunk',
+      'road-to-vostok': 'road-to-vostok',
+      'saros': 'saros',
+      'gta-6': 'gta-6'
+    };
+    return (knownMap[gameId] || gameId) + '.svg';
+  }
+
   // ============ READING PROGRESS ============
   function initProgressBar() {
-    const bar = document.getElementById('readingProgress');
+    var bar = document.getElementById('readingProgress');
     if (!bar) return;
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement;
-      const total = h.scrollHeight - h.clientHeight;
+    window.addEventListener('scroll', function() {
+      var h = document.documentElement;
+      var total = h.scrollHeight - h.clientHeight;
       bar.style.width = total > 0 ? (h.scrollTop / total * 100) + '%' : '0%';
     });
   }
 
   // ============ DARK/LIGHT TOGGLE ============
   function initThemeToggle() {
-    const btn = document.getElementById('themeToggle');
+    var btn = document.getElementById('themeToggle');
     if (!btn) return;
-    const saved = localStorage.getItem('theme') || 'dark';
+    var saved = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', saved);
     btn.textContent = saved === 'dark' ? '☀️' : '🌙';
-
-    btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
+    btn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
       btn.textContent = next === 'dark' ? '☀️' : '🌙';
@@ -36,194 +63,173 @@
 
   // ============ HERO CAROUSEL ============
   function initCarousel() {
-    const track = document.getElementById('heroTrack');
-    const nav = document.getElementById('heroNav');
-    const prev = document.getElementById('heroPrev');
-    const next = document.getElementById('heroNext');
+    var track = document.getElementById('heroTrack');
+    var nav = document.getElementById('heroNav');
+    var prev = document.getElementById('heroPrev');
+    var next = document.getElementById('heroNext');
     if (!track || !nav) return;
 
-    const featured = GAMES.filter(g => g.featured).slice(0, 5);
-    if (featured.length === 0) return;
+    var featured = GAMES.filter(function(g) { return g.featured; }).slice(0, 5);
+    if (!featured.length) return;
 
-    const imgMap = {
-      'gothic-1-remake': 'gothic-remake.svg', 'solarpunk': 'solarpunk.svg',
-      'nioh-3': 'nioh-3.svg', 'resident-evil-requiem': 're-requiem.svg',
-      'slay-the-spire-2': 'sts-2.svg', 'road-to-vostok': 'road-to-vostok.svg',
-      'mouse-pi-for-hire': 'mouse-pi.svg', 'clair-obscur-expedition-33': 'clair-obscur.svg',
-      'baldurs-gate-3': 'bg3.svg', 'black-myth-wukong': 'wukong.svg',
-      'saros': 'saros.svg', 'gta-6': 'gta-6.svg'
-    };
-
-    track.innerHTML = featured.map((g, i) => {
-      const img = imgMap[g.id] || '';
-      return `<div class="hero-slide" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));">
-        <div class="hero-slide-content">
-          <span class="hero-slide-badge">${g.rating > 0 ? '★ ' + g.rating + '/100' : 'Coming Soon'}</span>
-          <h2>${g.title}</h2>
-          <p>${g.description}</p>
-          <a href="games/${g.id}.html" class="btn-primary">View ${g.guides.length} Guides →</a>
-        </div>
-      </div>`;
+    track.innerHTML = featured.map(function(g) {
+      var img = getGameImg(g.id);
+      return '<div class="hero-slide" style="background:linear-gradient(135deg,var(--bg-card),var(--bg-secondary));">' +
+        '<div class="hero-slide-content">' +
+          '<span class="hero-slide-badge">' + (g.rating > 0 ? '★ ' + g.rating + '/100' : 'Coming Soon') + '</span>' +
+          '<h2>' + g.title + '</h2>' +
+          '<p>' + (g.description || '') + '</p>' +
+          '<a href="games/' + g.id + '.html" class="btn-primary">View ' + (g.guides || []).length + ' Guides →</a>' +
+        '</div>' +
+      '</div>';
     }).join('');
 
-    // Dots
-    nav.innerHTML = featured.map((_, i) => `<span class="hero-dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('');
+    nav.innerHTML = featured.map(function(_, i) {
+      return '<span class="hero-dot' + (i === 0 ? ' active' : '') + '" data-index="' + i + '"></span>';
+    }).join('');
 
-    let current = 0;
-    const dots = nav.querySelectorAll('.hero-dot');
-    const totalSlides = featured.length;
+    var current = 0;
+    var dots = nav.querySelectorAll('.hero-dot');
+    var totalSlides = featured.length;
 
     function goTo(idx) {
       current = ((idx % totalSlides) + totalSlides) % totalSlides;
-      track.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
     }
 
-    dots.forEach(d => d.addEventListener('click', () => goTo(parseInt(d.dataset.index))));
-    if (prev) prev.addEventListener('click', () => goTo(current - 1));
-    if (next) next.addEventListener('click', () => goTo(current + 1));
-
-    // Auto-advance every 5s
-    setInterval(() => goTo(current + 1), 5000);
+    dots.forEach(function(d) {
+      d.addEventListener('click', function() { goTo(parseInt(d.dataset.index)); });
+    });
+    if (prev) prev.addEventListener('click', function() { goTo(current - 1); });
+    if (next) next.addEventListener('click', function() { goTo(current + 1); });
+    setInterval(function() { goTo(current + 1); }, 5000);
   }
 
   // ============ TRENDING HORIZONTAL SCROLL ============
   function renderTrendingRow() {
-    const row = document.getElementById('trendingRow');
+    var row = document.getElementById('trendingRow');
     if (!row) return;
-    const trending = GAMES.filter(g => g.trending).slice(0, 8);
-    const imgMap = {
-      'gothic-1-remake': 'gothic-remake.svg', 'solarpunk': 'solarpunk.svg',
-      'slay-the-spire-2': 'sts-2.svg', 'road-to-vostok': 'road-to-vostok.svg',
-      'mouse-pi-for-hire': 'mouse-pi.svg', 'saros': 'saros.svg', 'gta-6': 'gta-6.svg'
-    };
+    var trending = GAMES.filter(function(g) { return g.trending; }).slice(0, 8);
 
-    row.innerHTML = trending.map((g, i) => {
-      const catName = getCategoryName(g.category);
-      const img = imgMap[g.id] || '';
-      return `<div class="trending-card">
-        <a href="games/${g.id}.html">
-          <div class="trending-card-img">
-            <img src="img/${img}" alt="${g.title}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=font-size:3rem>🎮</div>'">
-            <span class="trending-card-num">${String(i + 1).padStart(2, '0')}</span>
-          </div>
-        </a>
-        <div class="trending-card-body">
-          <div class="trending-card-category">${catName}</div>
-          <h4><a href="games/${g.id}.html">${g.title}</a></h4>
-        </div>
-      </div>`;
+    row.innerHTML = trending.map(function(g, i) {
+      var catName = getCategoryName(g.category);
+      var img = getGameImg(g.id);
+      return '<div class="trending-card">' +
+        '<a href="games/' + g.id + '.html">' +
+          '<div class="trending-card-img">' +
+            '<img src="img/' + img + '" alt="' + g.title + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.innerHTML=\'<div style=font-size:3rem>&#x1f3ae;</div>\'">' +
+            '<span class="trending-card-num">' + String(i + 1).padStart(2, '0') + '</span>' +
+          '</div>' +
+        '</a>' +
+        '<div class="trending-card-body">' +
+          '<div class="trending-card-category">' + catName + '</div>' +
+          '<h4><a href="games/' + g.id + '.html">' + g.title + '</a></h4>' +
+        '</div>' +
+      '</div>';
     }).join('');
   }
 
   // ============ FEATURED GRID ============
   function renderFeaturedGrid() {
-    const grid = document.getElementById('featuredGrid');
+    var grid = document.getElementById('featuredGrid');
     if (!grid) return;
-    const featured = GAMES.filter(g => g.featured).slice(0, 4);
-    const imgMap = {
-      'gothic-1-remake': 'gothic-remake.svg', 'solarpunk': 'solarpunk.svg',
-      'nioh-3': 'nioh-3.svg', 'resident-evil-requiem': 're-requiem.svg',
-      'slay-the-spire-2': 'sts-2.svg', 'clair-obscur-expedition-33': 'clair-obscur.svg',
-      'baldurs-gate-3': 'bg3.svg', 'gta-6': 'gta-6.svg'
-    };
+    var featured = GAMES.filter(function(g) { return g.featured; }).slice(0, 4);
 
-    grid.innerHTML = featured.map(g => {
-      const img = imgMap[g.id] || '';
-      const catName = getCategoryName(g.category);
-      return `<article class="featured-card">
-        <a href="games/${g.id}.html">
-          <div class="featured-card-image">
-            <img src="img/${img}" alt="${g.title}" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=font-size:4rem>🎮</div>'">
-            <span class="featured-card-badge">${g.rating > 0 ? '★ ' + g.rating : 'TBA'}</span>
-          </div>
-        </a>
-        <div class="featured-card-body">
-          <div class="featured-card-category">${catName}</div>
-          <h3 class="featured-card-title"><a href="games/${g.id}.html">${g.title} — Ultimate Guide Hub</a></h3>
-          <p class="featured-card-excerpt">${g.description}</p>
-          <div class="featured-card-meta">
-            <span>${g.guides.length} guides</span><span>${g.platforms.join(', ')}</span><span>${g.developer}</span>
-          </div>
-        </div>
-      </article>`;
+    grid.innerHTML = featured.map(function(g) {
+      var img = getGameImg(g.id);
+      var catName = getCategoryName(g.category);
+      return '<article class="featured-card">' +
+        '<a href="games/' + g.id + '.html">' +
+          '<div class="featured-card-image">' +
+            '<img src="img/' + img + '" alt="' + g.title + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.innerHTML=\'<div style=font-size:4rem>&#x1f3ae;</div>\'">' +
+            '<span class="featured-card-badge">' + (g.rating > 0 ? '★ ' + g.rating : 'TBA') + '</span>' +
+          '</div>' +
+        '</a>' +
+        '<div class="featured-card-body">' +
+          '<div class="featured-card-category">' + catName + '</div>' +
+          '<h3 class="featured-card-title"><a href="games/' + g.id + '.html">' + g.title + ' — Ultimate Guide Hub</a></h3>' +
+          '<p class="featured-card-excerpt">' + (g.description || '') + '</p>' +
+          '<div class="featured-card-meta">' +
+            '<span>' + (g.guides || []).length + ' guides</span><span>' + (g.platforms || []).join(', ') + '</span><span>' + (g.developer || '') + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
     }).join('');
   }
 
   // ============ LATEST GUIDES GRID ============
   function renderLatestGuides() {
-    const grid = document.getElementById('latestGuides');
+    var grid = document.getElementById('latestGuides');
     if (!grid) return;
-    const latest = ALL_GUIDES.slice(0, 12);
-
-    grid.innerHTML = latest.map(guide => {
-      const catName = getCategoryName(guide.gameCategory);
-      return `<article class="article-card">
-        <div class="article-card-category">${catName}</div>
-        <h3 class="article-card-title"><a href="guides/${guide.gameId}/${guide.slug}.html">${guide.title}</a></h3>
-        <p class="article-card-excerpt">${guide.excerpt}</p>
-        <div class="article-card-meta">
-          <span>${guide.gameTitle}</span><span>${formatDate(guide.date)}</span>
-        </div>
-      </article>`;
+    var latest = ALL_GUIDES.slice(0, 12);
+    grid.innerHTML = latest.map(function(guide) {
+      return '<article class="article-card">' +
+        '<div class="article-card-category">' + getCategoryName(guide.gameCategory) + '</div>' +
+        '<h3 class="article-card-title"><a href="guides/' + guide.gameId + '/' + guide.slug + '.html">' + (guide.title || guide.slug) + '</a></h3>' +
+        '<p class="article-card-excerpt">' + (guide.excerpt || '') + '</p>' +
+        '<div class="article-card-meta">' +
+          '<span>' + (guide.gameTitle || '') + '</span><span>' + (guide.date ? formatDate(guide.date) : '') + '</span>' +
+        '</div>' +
+      '</article>';
     }).join('');
   }
 
   // ============ SIDEBAR ============
   function renderSidebar() {
-    const list = document.getElementById('trendingList');
-    const tags = document.getElementById('categoryTags');
+    var list = document.getElementById('trendingList');
+    var tags = document.getElementById('categoryTags');
     if (list) {
-      list.innerHTML = GAMES.filter(g => g.trending).slice(0, 7).map((g, i) =>
-        `<li class="trending-item">
-          <span class="trending-num">${String(i + 1).padStart(2, '0')}</span>
-          <div class="trending-info">
-            <h4><a href="games/${g.id}.html">${g.title}</a></h4>
-            <span>${g.guides.length} guides · ${g.rating > 0 ? '★' + g.rating : 'TBA'}</span>
-          </div>
-        </li>`
-      ).join('');
+      list.innerHTML = GAMES.filter(function(g) { return g.trending; }).slice(0, 7).map(function(g, i) {
+        return '<li class="trending-item">' +
+          '<span class="trending-num">' + String(i + 1).padStart(2, '0') + '</span>' +
+          '<div class="trending-info">' +
+            '<h4><a href="games/' + g.id + '.html">' + g.title + '</a></h4>' +
+            '<span>' + (g.guides || []).length + ' guides · ' + (g.rating > 0 ? '★' + g.rating : 'TBA') + '</span>' +
+          '</div>' +
+        '</li>';
+      }).join('');
     }
     if (tags) {
-      tags.innerHTML = CATEGORIES.map(c =>
-        `<a href="categories/${c.slug}.html" class="category-tag">${c.icon} ${c.name}</a>`
-      ).join('');
+      tags.innerHTML = CATEGORIES.map(function(c) {
+        return '<a href="categories/' + c.slug + '.html" class="category-tag">' + c.icon + ' ' + c.name + '</a>';
+      }).join('');
     }
   }
 
   // ============ SMART SEARCH WITH AUTOCOMPLETE ============
   function initSearch() {
-    const input = document.getElementById('searchInput');
-    const dropdown = document.getElementById('searchDropdown');
+    var input = document.getElementById('searchInput');
+    var dropdown = document.getElementById('searchDropdown');
     if (!input || !dropdown) return;
 
     input.addEventListener('input', function() {
-      const q = this.value.trim().toLowerCase();
+      var q = this.value.trim().toLowerCase();
       if (q.length < 2) { dropdown.classList.remove('active'); return; }
 
-      const results = ALL_GUIDES.filter(g =>
-        g.title.toLowerCase().includes(q) ||
-        g.gameTitle.toLowerCase().includes(q) ||
-        g.excerpt.toLowerCase().includes(q) ||
-        (getCategoryName(g.gameCategory) || '').toLowerCase().includes(q)
-      ).slice(0, 8);
+      var results = ALL_GUIDES.filter(function(g) {
+        return (g.title || '').toLowerCase().indexOf(q) !== -1 ||
+               (g.gameTitle || '').toLowerCase().indexOf(q) !== -1 ||
+               (g.excerpt || '').toLowerCase().indexOf(q) !== -1 ||
+               (getCategoryName(g.gameCategory) || '').toLowerCase().indexOf(q) !== -1;
+      }).slice(0, 8);
 
       if (results.length === 0) {
         dropdown.innerHTML = '<div class="no-results">No guides found for "' + q + '"</div>';
       } else {
-        dropdown.innerHTML = results.map(r =>
-          `<a href="guides/${r.gameId}/${r.slug}.html">
-            <span style="font-size:0.9rem;">📄</span>
-            <div><strong>${r.title}</strong><br><span style="font-size:0.75rem;color:var(--text-muted)">${r.gameTitle} · ${getCategoryName(r.gameCategory)}</span></div>
-          </a>`
-        ).join('');
+        dropdown.innerHTML = results.map(function(r) {
+          return '<a href="guides/' + r.gameId + '/' + r.slug + '.html">' +
+            '<span style="font-size:0.9rem;">📄</span>' +
+            '<div><strong>' + (r.title || r.slug) + '</strong><br><span style="font-size:0.75rem;color:var(--text-muted)">' + (r.gameTitle || '') + ' · ' + getCategoryName(r.gameCategory) + '</span></div>' +
+          '</a>';
+        }).join('');
       }
       dropdown.classList.add('active');
     });
 
     input.addEventListener('keydown', function(e) {
       if (e.key === 'Enter') {
-        const first = dropdown.querySelector('a');
+        var first = dropdown.querySelector('a');
         if (first) window.location.href = first.href;
       }
     });
@@ -235,9 +241,9 @@
 
   // ============ NEWSLETTER ============
   window.subscribeNewsletter = function() {
-    const email = document.getElementById('newsletterEmail')?.value?.trim();
-    if (email && email.includes('@')) {
-      const btn = document.querySelector('.sidebar-widget .btn-primary');
+    var email = document.getElementById('newsletterEmail');
+    var btn = document.querySelector('.sidebar-widget .btn-primary');
+    if (email && email.value && email.value.indexOf('@') !== -1) {
       if (btn) { btn.textContent = '✓ Subscribed!'; btn.style.background = 'var(--green)'; }
     } else {
       alert('Please enter a valid email address.');

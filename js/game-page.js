@@ -28,6 +28,18 @@
 
     const categoryName = getCategoryName(game.category);
 
+    // Image filename mapping (some game IDs differ from image filenames)
+    var imgMap = {
+      'gothic-1-remake': 'gothic-remake',
+      'clair-obscur-expedition-33': 'clair-obscur',
+      'baldurs-gate-3': 'bg3',
+      'black-myth-wukong': 'wukong',
+      'resident-evil-requiem': 're-requiem',
+      'slay-the-spire-2': 'sts-2',
+      'mouse-pi-for-hire': 'mouse-pi'
+    };
+    var imgName = (imgMap[game.id] || game.id) + '.svg';
+
     main.innerHTML = `
       <nav class="breadcrumbs">
         <a href="/">Home</a> <span class="sep">›</span>
@@ -37,7 +49,7 @@
 
       <div class="game-hero">
         <div class="game-hero-image" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
-          <img src="../img/${game.id}.svg" alt="${game.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=font-size:5rem;display:flex;align-items:center;justify-content:center;height:100%'>🎮</div>'">
+          <img src="../img/${imgName}" alt="${game.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=font-size:5rem;display:flex;align-items:center;justify-content:center;height:100%'>🎮</div>'">
         </div>
         <div class="game-hero-info">
           <span style="display:inline-block;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:4px 14px;border-radius:20px;margin-bottom:12px;">${categoryName}</span>
